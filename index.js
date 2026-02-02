@@ -1,9 +1,11 @@
 document.querySelector(".loading").addEventListener("animationend", () => {
-    document.querySelector(".loadingpage").style.display = "none";
-    document.querySelector(".body").style.display = "flex";
+    const loader = document.querySelector(".loadingpage");
+    loader.style.display = "none";
+    const homePage = document.querySelector(".body");
+    homePage.style.display = "flex";
 });
 document.querySelector('.nav-actions').addEventListener('click', (e) => {
-    if (e.offsetX > e.target.offsetWidth - 40) {
+    if (e.offsetX > e.currentTarget.offsetWidth - 40) {
         openNav();
     }
 });
