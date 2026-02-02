@@ -1,7 +1,7 @@
-document.querySelector(".loading").addEventListener("animationend",()=>{
-    document.querySelector(".body").style.display= "flex";
-})
-
+document.querySelector(".loading").addEventListener("animationend", () => {
+    document.querySelector(".loadingpage").style.display = "none";
+    document.querySelector(".body").style.display = "flex";
+});
 document.querySelector('.nav-actions').addEventListener('click', (e) => {
     if (e.offsetX > e.target.offsetWidth - 40) {
         openNav();

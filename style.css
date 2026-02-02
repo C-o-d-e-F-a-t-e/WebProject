@@ -13,6 +13,7 @@ body{
     padding: 0;
 }
 .loadingpage{
+    position:fixed;
     height: 100%;
     width: 100%;
     display: flex;
@@ -67,6 +68,8 @@ body{
 }
 .body{
     background-color: white;
+    display:none;
+
 }
 .header{
     display:flex;
