@@ -2,7 +2,6 @@
     font-family: "Orbitron";
     src: url(./fonts/Orbitron-Black.ttf) format("truetype");
 }
-
 .loadingpage {
     position: fixed;
     top: 0;
@@ -17,7 +16,6 @@
     z-index: 9999;
     animation: loadingDone 5s ease forwards;
 }
-
 .loading {
     background: linear-gradient(to right, black 50%, #ccc 50%);
     background-clip: text;
@@ -31,12 +29,10 @@
     animation: loadingAnimation 5s ease forwards;
     transform-style: preserve-3d;
 }
-
 .body {
     display: none;
     flex-direction: column;
 }
-
 @keyframes loadingAnimation {
     from { background-position: 100% 0%; }
     30% { background-position: 70% 0%; }
@@ -47,7 +43,6 @@
         opacity: 0; 
     }
 }
-
 @keyframes loadingDone {
     99% { opacity: 1; visibility: visible; }
     100% { opacity: 0; visibility: hidden; display: none; }
@@ -69,40 +64,33 @@
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
 }
-
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: #0a6cff;
 }
-
 .logo span {
     color: #1a1a1a;
 }
-
 .nav-links a {
     margin: 0 15px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
 }
-
 .nav-links a:hover {
     color: #0a6cff;
 }
-
 .nav-actions {
     display: flex;
     align-items: center;
 }
-
 .signin {
     margin-right: 20px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
 }
-
 .btn {
     padding: 10px 18px;
     background-color: #0a6cff;
@@ -111,12 +99,12 @@
     border-radius: 6px;
     font-weight: 500;
 }
-
 .btn:hover {
     background-color: #084fc4;
 }
 
-/* Hero */
+
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -124,21 +112,17 @@
     padding: 60px 40px;
     background: #f4f9ff;
 }
-
 .hero-text {
     max-width: 500px;
 }
-
 .hero h1 {
     font-size: 38px;
     color: #0a6cff;
 }
-
 .hero p {
     margin: 15px 0;
     font-size: 18px;
 }
-
 .hero button {
     padding: 12px 25px;
     background: #0a6cff;
@@ -148,18 +132,16 @@
     cursor: pointer;
 }
 
-/* Services */
+
 .services {
     padding: 60px 40px;
     text-align: center;
 }
-
 .services h2 {
     margin-bottom: 20px;
     color: #0a6cff;
     font-size: 32px;
 }
-
 .services-intro {
     max-width: 700px;
     margin: 0 auto 40px auto;
@@ -167,14 +149,12 @@
     color: #444;
     line-height: 1.6;
 }
-
 .service-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
-
 .card {
     background: #f4f9ff;
     padding: 25px;
@@ -182,17 +162,14 @@
     border-radius: 10px;
     transition: 0.3s ease;
 }
-
 .card h3 {
     margin-bottom: 10px;
     color: #0a6cff;
 }
-
 .card p {
     color: #444;
     font-size: 16px;
 }
-
 .card:hover {
     transform: translateY(-5px);
 }
@@ -203,13 +180,11 @@
     text-align: center;
     background: #eef4ff;
 }
-
 .how-it-works h2 {
     margin-bottom: 20px;
     color: #0a6cff;
     font-size: 32px;
 }
-
 .how-intro {
     max-width: 700px;
     margin: 0 auto 40px auto;
@@ -217,14 +192,12 @@
     color: #444;
     line-height: 1.6;
 }
-
 .how-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
-
 .how-cards .card {
     background: #f4f9ff;
     padding: 25px;
@@ -233,11 +206,9 @@
     transition: 0.3s ease;
     position: relative;
 }
-
 .how-cards .card:hover {
     transform: translateY(-5px);
 }
-
 .step-number {
     display: inline-block;
     font-size: 24px;
@@ -247,54 +218,49 @@
 }
 
 
-/* Our Doctors */
 .our-doctors {
     background: #f4f9ff;
     padding: 60px 40px;
     text-align: center;
 }
-
 .our-doctors h2 {
     margin-bottom: 30px;
     color: #0a6cff;
 }
-
 .doctor-list {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
-
 .doctor-card {
     background: white;
     padding: 20px;
     width: 200px;
     border-radius: 10px;
 }
-
 .doctor-card img {
     width: 80px;
     margin-bottom: 10px;
 }
 
-/* About */
+
 .about {
     padding: 60px 40px;
     text-align: center;
 }
-
 .about h2 {
     margin-bottom: 20px;
     color: #0a6cff;
 }
-
 .about-text {
     max-width: 700px;
     margin: auto;
     font-size: 18px;
     color: #444;
 }
+
+
 
 /* Footer */
 footer {
@@ -303,7 +269,6 @@ footer {
     background: #0a6cff;
     color: white;
 }
-
 /* Responsive */
 @media (max-width: 900px) {
     .nav-links {
@@ -321,4 +286,87 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* Full-window sections + scroll navigation */
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    scroll-snap-type: y mandatory;
+    -webkit-scroll-snap-type: y mandatory;
+}
+section {
+    height: 120vh;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    -webkit-scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 40px;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    z-index: 10;
+}
+
+
+.about-cta {
+    background: linear-gradient(180deg,#0a6cff 0%,#2b91ff 100%);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 6px;
+}
+.about-cta h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #fff
+}
+.about-sub {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
+}
+.cta-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0;
+}
+.cta-input{ padding: 12px 16px; border-radius: 8px; border: none; width: 320px; max-width: 50%; }
+.book-btn{ padding: 12px 22px; }
+.cta-divider{ border: none; height: 1px; background: rgb(255, 18, 18); margin: 24px auto; width: 60%; }
+.stats{ display:flex; justify-content:center; gap:80px; margin-top:12px; }
+.stat{ text-align:center; color: #f7f7f7; }
+.stat .num{ font-size:28px; font-weight:700; margin-bottom:6px; }
+.stat .label{ font-size:14px; opacity:0.9 }
+
+.about-footer-widgets{
+    background:#1f2937;
+    color:#d1d5db;
+    display:flex;
+    gap:30px;
+    padding:36px 40px;
+    margin-top:18px;
+    flex-wrap:wrap;
+    align-items:flex-start;
+}
+.about-footer-widgets .footer-column{ flex:1 1 200px; min-width:180px }
+.brand-logo{ font-size:20px; color:#fff; font-weight:700; margin-bottom:8px }
+.socials{ display:flex; gap:10px; margin-top:12px }
+.social{ background:rgba(255,255,255,0.06); padding:8px 10px; border-radius:6px; color:#fff }
+.about-footer-widgets h4{ color:#fff; margin-bottom:8px }
+.about-footer-widgets a{ color:#cbd5e1; text-decoration:none }
+
+@media (max-width:900px){
+    .cta-actions{ flex-direction:column }
+    .stats{ gap:30px; flex-direction:column }
+    .about-footer-widgets{ flex-direction:column }
 }

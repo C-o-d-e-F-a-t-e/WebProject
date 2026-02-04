@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
     <meta charset="UTF-8">
     <title>TeleMed | Online Healthcare</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="index.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+
+
 <body>
     <div class="loadingpage">
         <span class="loading">Health Connect</span>
     </div>
-    <div class="body"><header class="navbar">
-        <div class="logo">Health<span>Connect</span></div>
+    <div class="body">
 
+        <header class="navbar">
+        <div class="logo">Health<span>Connect</span></div>
         <nav class="nav-links">
             <a href="#services">Services</a>
             <a href="#howitworks">How It Works</a>
@@ -25,12 +34,15 @@
             <a href="#signin" class="signin">Sign In</a>
             <a href="#bookappointment" class="btn">Book Appointment</a>
         </div>
-    </header>
+        </header>
+
+
 
     <!-- medali -->
     <section class="hero">*
      <h2>Accueil (medali)</h2>
     </section>
+
 
     <!-- ahmed -->
     <section class="services" id="services">
@@ -49,12 +61,75 @@
         <h2>Meet Our Doctors (souhayl)</h2>
     </section>
 
+
     <!-- mounib -->
     <section class="about" id="about">
-        <h2>About HealthConnect (mounib)</h2>
+        <div class="about-cta">
+            <h2>Ready to Start Your Healthcare Journey?</h2>
+            <p class="about-sub">Join thousands of patients who trust HealthConnect for their medical needs. Book your first consultation today and experience the future of healthcare.</p>
+            <div class="cta-actions">
+                <button class="btn book-btn">Book Your Appointment</button>
+                <input class="cta-input" placeholder="Search services or doctors" />
+            </div>
+
+            <hr class="cta-divider" />
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="num">100%</div>
+                    <div class="label">Secure & Private</div>
+                </div>
+                <div class="stat">
+                    <div class="num">24/7</div>
+                    <div class="label">Available Support</div>
+                </div>
+                <div class="stat">
+                    <div class="num">500+</div>
+                    <div class="label">Expert Doctors</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-footer-widgets">
+            <div class="footer-column brand">
+                <div class="brand-logo">HealthConnect</div>
+                <p>Your trusted partner for accessible, quality healthcare through secure telemedicine consultations.</p>
+                <div class="socials">
+                    <span class="social">f</span>
+                    <span class="social">t</span>
+                    <span class="social">in</span>
+                    <span class="social">ig</span>
+                </div>
+            </div>
+            <div class="footer-column links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#howitworks">How It Works</a></li>
+                    <li><a href="#doctors">Our Doctors</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column support">
+                <h4>Support</h4>
+                <ul>
+                    <li>Help Center</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer-column contact">
+                <h4>Contact</h4>
+                <p>support@healthconnect.example</p>
+                <p>*phone number*</p>
+                <p>123 Health Ave, Suite 10<br>Healthcare City, HC 12345</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
+    
+
     <footer>
         <p>© 2026 HealthConnect. All rights reserved.</p>
     </footer>
