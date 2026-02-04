@@ -1,0 +1,481 @@
+@font-face {
+    font-family: "Orbitron";
+    src: url(./fonts/Orbitron-Black.ttf) format("truetype");
+}
+
+.loadingpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    perspective: 800px;
+    z-index: 9999;
+    animation: loadingDone 5s ease forwards;
+}
+
+.loading {
+    background: linear-gradient(to right, black 50%, #ccc 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    color: transparent;
+    font-size: 80px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 20px;
+    animation: loadingAnimation 5s ease forwards;
+    transform-style: preserve-3d;
+}
+
+.body {
+    display: none;
+    flex-direction: column;
+}
+
+@keyframes loadingAnimation {
+    from { background-position: 100% 0%; }
+    30% { background-position: 70% 0%; }
+    80% { background-position: 40% 0%; opacity: 1; }
+    to { 
+        background-position: 0% 0%; 
+        transform: translateZ(200px); 
+        opacity: 0; 
+    }
+}
+
+@keyframes loadingDone {
+    99% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; display: none; }
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a6cff;
+}
+
+.logo span {
+    color: #1a1a1a;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #0a6cff;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.signin {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.btn {
+    padding: 10px 18px;
+    background-color: #0a6cff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #084fc4;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background: #f4f9ff;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    color: #0a6cff;
+}
+
+.hero p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    background: #0a6cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Services */
+.services {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+    color: #0a6cff;
+    font-size: 32px;
+}
+
+.services-intro {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.service-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #f4f9ff;
+    padding: 25px;
+    width: 260px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #0a6cff;
+}
+
+.card p {
+    color: #444;
+    font-size: 16px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.how-it-works {
+    padding: 60px 40px;
+    text-align: center;
+    background: #eef4ff;
+}
+
+.how-it-works h2 {
+    margin-bottom: 20px;
+    color: #0a6cff;
+    font-size: 32px;
+}
+
+.how-intro {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.how-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.how-cards .card {
+    background: #f4f9ff;
+    padding: 25px;
+    width: 260px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.how-cards .card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a6cff;
+    margin-bottom: 10px;
+}
+
+
+/* Our Doctors */
+.our-doctors {
+    background: #f4f9ff;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.our-doctors h2 {
+    margin-bottom: 30px;
+    color: #0a6cff;
+}
+
+.doctor-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.doctor-card {
+    background: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.doctor-card img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* About */
+.about {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: #0a6cff;
+}
+
+.about-text {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0a6cff;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-box,
+    .how-cards,
+    .doctor-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Main Section Wrapper */
+.our-doctors {
+    background: #f4f9ff;
+    padding: 60px 20px;
+}
+
+/* The Layout Container */
+.doctors-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 1320px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* --- SIDEBAR STYLING --- */
+.doctors-sidebar {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+    /* Force left alignment for filter box */
+    text-align: left !important;
+}
+
+/* Specific styling for the card inside the sidebar */
+.doctors-sidebar .doctors-card {
+    padding: 25px; 
+}
+
+/* Style the Sidebar Title */
+.doctors-sidebar h5 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px !important;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+/* Style Labels */
+.doctors-sidebar label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 14px;
+}
+
+/* Style Checkbox Area */
+.doctors-sidebar input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+/* --- DOCTORS GRID STYLING --- */
+.doctors-grid {
+    flex: 1 0 0%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* --- CARD COMPONENT --- */
+.doctors-card {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 1 1 300px; 
+}
+
+/* Hover Effect */
+.doctors-hover {
+    transition: transform 0.2s;
+}
+.doctors-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Doctor Image */
+.doctors-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+/* Gray Info Box (Next slot / Fee) */
+.doctors-info-box {
+    background-color: #f8f9fa;
+    padding: 0.7rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* --- BUTTONS --- */
+.doctors-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.doctors-btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+.doctors-btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.doctors-btn-outline {
+    color: #0d6efd;
+    border-color: #0d6efd;
+    background-color: transparent;
+}
+.doctors-btn-outline:hover {
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+/* --- FORM INPUTS --- */
+.doctors-input, .doctors-select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    outline: none;
+}
+.doctors-input:focus, .doctors-select:focus {
+    border-color: #0a6cff;
+}
+
+/* Responsive Fix */
+@media (max-width: 992px) {
+    .doctors-sidebar {
+        max-width: 100%; 
+    }
+}
