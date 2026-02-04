@@ -4,9 +4,6 @@
 }
 
 .loadingpage {
-    position: fixed;
-    top: 0;
-    left: 0;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -14,14 +11,12 @@
     align-items: center;
     background: white;
     perspective: 800px;
-    z-index: 9999;
     animation: loadingDone 5s ease forwards;
 }
 
 .loading {
-    background: linear-gradient(to right, black 50%, #ccc 50%);
+    background: linear-gradient(to right, #0a6cff 50%, #dbeafe 50%);
     background-clip: text;
-    -webkit-background-clip: text;
     background-size: 200% 100%;
     background-position: 100% 0%;
     color: transparent;
@@ -40,7 +35,10 @@
 @keyframes loadingAnimation {
     from { background-position: 100% 0%; }
     30% { background-position: 70% 0%; }
-    80% { background-position: 40% 0%; opacity: 1; }
+    80% { background-position: 40% 0%;}
+    90%{
+        opacity: 1;
+    }
     to { 
         background-position: 0% 0%; 
         transform: translateZ(200px); 
@@ -201,13 +199,96 @@
 .how-it-works {
     padding: 60px 40px;
     text-align: center;
-    background: #eef4ff;
+    background: #f9fafc;
 }
 
-.how-it-works h2 {
-    margin-bottom: 20px;
-    color: #0a6cff;
-    font-size: 32px;
+.how-it-works h2{
+    font-size: 50px;
+    font-weight: 600;
+    word-spacing: 10px;
+    padding-bottom: 20px;
+}
+
+.how-it-works h4{
+    color: #8c8c8c;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.how-it-works .schema-wrapper{
+    display: grid;
+    place-items: center;
+    height: fit-content;
+}
+
+.how-it-works .schema-wrapper hr {
+    grid-area: 1/1;
+    z-index: 0;
+    width: 100%;
+    height: 2px; 
+    border: none; 
+    background: linear-gradient(to right, transparent 5%, blue 50%, transparent 95%);
+}
+
+.how-it-works .howitworks-wrapper{
+    grid-area: 1/1;
+    z-index: 1;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.how-it-works .howitworks-wrapper .step{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #dbeafe;
+    border-radius: 10px;
+    background-color: #f9fafc;
+    padding: 25px;
+    display: grid;
+    place-items: center;
+}
+
+.how-it-works .howitworks-wrapper .step:hover{
+    border: 2px solid #3b82f6;
+}
+
+.how-it-works .howitworks-wrapper .step .step-img{
+    height: 50px;
+    width: 50px;
+    grid-area: 1/1;
+    z-index: 1;
+}
+
+.how-it-works .howitworks-wrapper .step div{
+    height: 40px;
+    width: 40px;
+    grid-area: 1/1;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    transform: translateY(-50px);
+}
+
+.how-it-works .text-wrapper{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.how-it-works .text-wrapper .text-step{
+    margin-bottom: 25px;
 }
 
 .how-intro {
