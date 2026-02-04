@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Book Appointment | HealthConnect</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="book.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+                Health
+                <span>Connect</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+            </nav>
+        </header>
+
+        <section class="book-appointment">
+            <div class="container">
+                <h1>Book Your Appointment</h1>
+                <p>Schedule a consultation with one of our trusted doctors quickly and easily.</p>
+
+                <form action="#" method="POST" class="appointment-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                placeholder="Your Name"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+216 XXX XXX XXX"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor">Choose Doctor</label>
+                            <select id="doctor" name="doctor" required>
+                                <option value="">Select a doctor</option>
+                                <option value="dr_souhayl">Dr. Souhayl</option>
+                                <option value="dr_ahmed">Dr. Ahmed</option>
+                                <option value="dr_adem">Dr. Adem</option>
+                                <option value="dr_mounib">Dr. Mounib</option>
+                                <option value="dr_mohamed_ali">Dr. Mohamed Ali</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <input type="time" id="time" name="time" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes</label>
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            placeholder="Any specific concerns..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Book Appointment</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 HealthConnect. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
